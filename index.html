@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./notify.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Formulário | IBMS</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="img-box">
+            <img src="./img/bg.jpg">
+        </div>
+        <div class="form-box">
+            <h2>Cadastro de Voluntário</h2>
+            <form action="#" class="form">
+                <div class="input-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" oninput=nameValid() placeholder="Digite o seu nome completo"
+                        autocomplete="off">
+                    <span class="span">O nome deve ter no mínimo 10 caracteres</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" maxlength="14" oninput=phoneNumberValid() placeholder="(xx)9xxxx-xxxx"
+                        autocomplete="off">
+                    <span class="span">Digite um número válido</span>
+                </div>
+
+                <div class="select-box">
+                    <label for="interest">Interesse:</label>
+                    <select name="interest" id="interest">
+                        <option selected value="midiaSocial">Mídia Social</option>
+                        <option value="projecao">Projeção</option>
+                        <option value="iluminacao">Iluminação</option>
+                        <option value="fotografia">Fotografia</option>
+                        <option value="evangelizacao">Evangelização</option>
+                        <option value="comunicacao">Comunicação</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group">
+                    <input type="submit" id="submit-btn" value="Cadastrar">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
